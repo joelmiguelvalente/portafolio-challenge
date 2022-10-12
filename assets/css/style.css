@@ -276,7 +276,7 @@ section.experience {
 }
 .experiencia__botao--repo,
 .experience__botao--demo,
-.formcontato__botao {
+.formcontacto__botao {
 	padding: 0 1rem;
 	height: 40px;
 }
@@ -284,47 +284,91 @@ section.experience {
 	border: 1px solid #2A7AE4;
 	color: #2A7AE4;
 }
-.experience__botao--demo, .formcontato__botao {
+.experience__botao--demo, .formcontacto__botao {
 	background-color: #2A7AE4;
 	color: #FFF;
 }
 
 /*Contacto*/
-section.formcontato {
+section.formcontacto {
 	background-color: var(--azul-10);
 	padding: 4rem 6rem;
 }
-.formcontato__contacto {
+.formcontacto__contacto {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: 1rem;
 }
-.formcontato__title {
+.formcontacto__title {
 	font-size: 2rem;
 	font-weight: 700;
 	margin-bottom: 8px;
 }
-.formcontato__subtext {
+.formcontacto__subtext {
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5rem;
 }
-.formcontato__form {
+.formcontacto__form {
 	margin-top: 2rem;
 }
-.formcontato__input, .formcontato__textarea {
+.formcontacto__form--grupo {
+	position: relative;
+}
+.formcontacto__label {
+	position: absolute;
+	pointer-events: none;
+	top: 20px;
+	left: 1.6%;
+	font-size: .9rem;
+	color: #A2A2A2;
+	font-family: 'Raleway', serif;
+	z-index: 99;
+	transition: top .4s ease, .4s color ease-in-out;
+}
+.formcontacto__input, .formcontacto__textarea {
    box-sizing: border-box;
    border-bottom: 2px solid #A2A2A2;
-   padding: .75rem 1rem .5rem .75rem;
+   padding: 1rem 1rem 0.1rem .75rem;
    height: 3.25rem;
    width: 100%;
    margin-bottom: 2rem;
    position: relative;
+	transition: .4s border-bottom ease-in-out;
 }
-.formcontato__textarea {
+.formcontacto__input::placeholder, .formcontacto__textarea::placeholder {
+	color: transparent;
+}
+.formcontacto__form--grupo.active .formcontacto__label {
+	top: 5px;
+	font-size: 0.8rem;
+	color: #2A7AE4;
+	transition: top .4s ease, .4s color ease-in-out;
+}
+.formcontacto__form--grupo.active .formcontacto__input {
+	border-bottom-color: #2A7AE4;
+	transition: .4s border-bottom-color ease-in-out;
+}
+.formcontacto__form--grupo.required .formcontacto__input {
+	border-bottom-color: #ff3344;
+	transition: .4s border-bottom-color ease-in-out;
+}
+.formcontacto__textarea {
 	height: 130px;
 }
-
+.input-message-error {
+	display: none;
+	position: absolute;
+	color: #ff3344;
+	bottom: 16px;
+	font-style: italic;
+	font-size: 0.8rem;
+	left: 0;
+	width: 100%;
+}
+.formcontacto__form--grupo.required .input-message-error {
+	display: block;
+}
 
 /*footeer*/
 section.footer {
@@ -447,19 +491,19 @@ Utiliza las referencias de los breakpoints @media abajo */
 		font-size: 0.875rem;
 	}
 	/*Contacto*/
-	section.formcontato {
+	section.formcontacto {
 		padding: 2rem;
 	}
-	.formcontato--esquerda {
+	.formcontacto--esquerda {
 		display: none;
 	}
-	.formcontato__contacto {
+	.formcontacto__contacto {
 		display: block;
 	}
-	.formcontato__title {
+	.formcontacto__title {
 		font-size: 1.375rem;
 	}
-	.formcontato__subtext {
+	.formcontacto__subtext {
 		font-size: 0.875rem;
 	}
 }
@@ -590,19 +634,19 @@ Utiliza las referencias de los breakpoints @media abajo */
 		font-size: 0.875rem;
 	}
 	/*Contacto*/
-	section.formcontato {
+	section.formcontacto {
 		padding: 2rem;
 	}
-	.formcontato--esquerda {
+	.formcontacto--esquerda {
 		display: none;
 	}
-	.formcontato__contacto {
+	.formcontacto__contacto {
 		display: block;
 	}
-	.formcontato__title {
+	.formcontacto__title {
 		font-size: 1.375rem;
 	}
-	.formcontato__subtext {
+	.formcontacto__subtext {
 		font-size: 0.875rem;
 	}
 

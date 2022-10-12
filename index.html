@@ -241,22 +241,37 @@
 		</section>
 
 		<!-- Sección de Contacto -->
-		<section class="formcontato" id="contacto">
-			<div class="formcontato__contacto">
-				<div class="formcontato--esquerda">
-					<img class="formcontato__img" src="assets/img/contact_image.png">
+		<section class="formcontacto" id="contacto">
+			<div class="formcontacto__contacto">
+				<div class="formcontacto--esquerda">
+					<img class="formcontacto__img" src="assets/img/contact_image.png">
 				</div>
-				<div class="formcontato__text">
-					<h2 class="formcontato__title">Contacto</h2>
-					<h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
-					<h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-					<form class="formcontato__form" name="form">
-						<input class="formcontato__input" type="text" name="nombre" title="Nombre" placeholder="Nombre">
-						<input class="formcontato__input" type="email" name="email" title="E-mail" placeholder="E-mail">
-						<input class="formcontato__input" type="text" name="asunto" title="Asunto" placeholder="Asunto">
-						<textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje"
-							placeholder="Mensaje"></textarea>
-						<button type="submit" class="formcontato__botao">Enviar mensaje</button>
+				<div class="formcontacto__text">
+					<h2 class="formcontacto__title">Contacto</h2>
+					<h3 class="formcontacto__subtext">¿Quieres contactarme?</h3>
+					<h3 class="formcontacto__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
+					<form class="formcontacto__form" name="form">
+						<div class="formcontacto__form--grupo">
+							<label class="formcontacto__label" for="nombre">Nombre</label>
+							<input class="formcontacto__input" type="text" id="nombre" name="nombre" title="Nombre" placeholder="Nombre" data-tipo="nombre" required>
+                     <span class="input-message-error">Este campo no es valido</span>
+						</div>
+						<div class="formcontacto__form--grupo">
+							<label class="formcontacto__label" for="email">E-mail</label>
+							<input class="formcontacto__input" type="email" id="email" name="email" title="E-mail" placeholder="E-mail" data-tipo="email" required>
+                     <span class="input-message-error">Este campo no es valido</span>
+						</div>
+						<div class="formcontacto__form--grupo">
+							<label class="formcontacto__label" for="asunto">Asunto</label>
+							<input class="formcontacto__input" type="text" id="asunto" name="asunto" title="Asunto" placeholder="Asunto" data-tipo="asunto">
+                     <span class="input-message-error">Este campo es opcional</span>
+						</div>
+						<div class="formcontacto__form--grupo">
+							<label class="formcontacto__label" for="mensagem">Mensaje</label>
+							<textarea class="formcontacto__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje" minlength="14" maxlength="250" pattern="[\s\S]{14,250}" data-tipo="mensaje" required></textarea>
+                     <span class="input-message-error">Este campo no es valido</span>
+						</div>
+						<button type="submit" class="formcontacto__botao">Enviar mensaje</button>
 					</form>
 				</div>
 			</div>
